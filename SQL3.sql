@@ -30,18 +30,58 @@ Insert into wildlife_info value(20,'Biligiri Rangaswamy Sanctuary', 'Karnataka',
 select * from wildlife_info;
 
 select * from  wildlife_info where wildlife_id=1;
+select * from  wildlife_info where wildlife_id=19;
+select * from  wildlife_info where state_name='Karnataka';
+select * from  wildlife_info where established_year=1974;
+select * from  wildlife_info where established_year=1988;
+
 
 select * from wildlife_info where wildlife_id=1 and established_year=1974;
- 
+select * from wildlife_info where wildlife_id=1 and established_year=1988;
+select * from wildlife_info where wildlife_id=1 and established_year=1974 and animal_name='Tiger';
+select * from wildlife_info where wildlife_id=3 and established_year=1974;
+select * from wildlife_info where wildlife_id=1 and category='Bird';
+
+
 select * from wildlife_info where wildlife_id=1 or established_year=1975;
+select * from wildlife_info where wildlife_id=2 or established_year=1975;
+select * from wildlife_info where state_name='Karnataka' or established_year=1975;
+select * from wildlife_info where wildlife_id=1 or category='Bird';
+select * from wildlife_info where wildlife_id=18 or established_year=1975;
+
+
  
 select  state_name, established_year, animal_name from wildlife_info where wildlife_id=10;
- 
+select  state_name, established_year, animal_name from wildlife_info where wildlife_id=19;
+select  state_name, established_year, animal_name from wildlife_info where state_name='Karnataka';
+select  state_name, established_year, animal_name,nearest_city, category from wildlife_info where wildlife_id=1;
+select  state_name  from wildlife_info where wildlife_id=2;
+
+
+
  
 select state_name, animal_name from wildlife_info where wildlife_id in(1);
- 
-select state_name, animal_name from wildlife_info where wildlife_id in(1);
+select  state_name, established_year, animal_name from wildlife_info where wildlife_id in(19);
+select  state_name, established_year, animal_name from wildlife_info where state_name in('Karnataka');
+select  state_name, established_year, animal_name,nearest_city, category from wildlife_info where wildlife_id in(1);
+select  state_name  from wildlife_info where wildlife_id in (2);
+
+select state_name, animal_name from wildlife_info where wildlife_id not in(1);
+select  state_name, established_year, animal_name from wildlife_info where wildlife_id not in(19);
+select  state_name, established_year, animal_name from wildlife_info where state_name not in('Karnataka');
+select  state_name, established_year, animal_name,nearest_city, category from wildlife_info where wildlife_id not in(1);
+select  state_name  from wildlife_info where wildlife_id not in (2);
+
   
 select * from wildlife_info where wildlife_id between 1 and 10;
-  
+select * from wildlife_info where wildlife_id between 5 and 10;
+select * from wildlife_info where established_year between 1956 and 1988;
+select * from wildlife_info where avg_lifespan_years between 10 and 60;
+select * from wildlife_info where wildlife_id between 10 and 13;
+
 select * from wildlife_info where wildlife_id not between 1 and 10;
+select * from wildlife_info where wildlife_id not between 5 and 10;
+select * from wildlife_info where established_year not between 1956 and 1988;
+select * from wildlife_info where avg_lifespan_years not between 10 and 60;
+select * from wildlife_info where wildlife_id not between 10 and 13;
+
